@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video.js Example</title>
+  <title>Video.js YouTube Example</title>
 
   <!-- Video.js CSS -->
   <link href="https://vjs.zencdn.net/8.17.2/video-js.css" rel="stylesheet" />
 
   <!-- Video.js JS -->
   <script src="https://vjs.zencdn.net/8.17.2/video.min.js"></script>
+
+  <!-- Video.js YouTube Plugin -->
+  <script src="https://unpkg.com/videojs-youtube@2.6.1/dist/Youtube.min.js"></script>
 
   <style>
     /* Custom styles for the video player */
@@ -24,14 +27,11 @@
 
 <body>
 
-  <h1>Online Video using Video.js</h1>
+  <h1>Online YouTube Video using Video.js</h1>
 
-  <!-- Video.js Player -->
+  <!-- Video.js Player with YouTube Plugin -->
   <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360"
-    poster="https://www.example.com/poster.jpg" <!-- URL to a poster image -->
-    data-setup="{}">
-
-    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4" />
+    data-setup='{"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=NbwiG0y25e8" }]}'>
     <!-- Fallback message if video is not supported -->
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
