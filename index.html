@@ -60,45 +60,7 @@
     });
   </script>
 
-
-
-<h1>YouTube Live Stream with Video.js</h1>
-
-  <!-- Video.js Player for YouTube Live Stream -->
-  <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-  </video>
-
-  <script>
-    // Initialize the Video.js player and set up the YouTube live stream source
-    var player = videojs('my-video', {
-      techOrder: ['youtube'],
-      sources: [{
-        src: 'https://www.youtube.com/watch?v=NbwiG0y25e8',
-        type: 'video/youtube'
-      }],
-      youtube: {
-        ytControls: 2,  // YouTube native controls
-        modestbranding: 1,
-        showinfo: 0
-      }
-    });
-
-    // Optional: You can listen for events if needed
-    player.on('ready', function() {
-      console.log('Player is ready!');
-    });
-
-    player.on('error', function(error) {
-      console.log('Error occurred: ', error);
-    });
-  </script>
-
-
-
+ 
 <iframe 
     width="560" 
     height="315" 
@@ -109,6 +71,16 @@
     allowfullscreen>
   </iframe>
 
+
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/oWW5TLrrbNo" 
+    title="YouTube Live Stream" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
 
 
 
