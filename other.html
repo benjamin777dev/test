@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Live Stream with Video.js</title>
+
+  <!-- Video.js CSS -->
+  <link href="https://vjs.zencdn.net/7.21.0/video-js.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Watch YouTube Live Stream</h1>
+
+  <!-- Video.js Player -->
+  <video
+    id="my-video"
+    class="video-js vjs-default-skin"
+    controls
+    width="640"
+    height="360"
+    data-setup='{"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=oWW5TLrrbNo" }]}' 
+    >
+  </video>
+
+  <!-- Video.js JavaScript -->
+  <script src="https://vjs.zencdn.net/7.21.0/video.min.js"></script>
+  
+  <!-- Video.js YouTube Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@2.6.1/dist/Youtube.min.js"></script>
+
+</body>
+</html>
