@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Video</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.17.2/video.min.js" integrity="sha512-OvIj8+vO4dNS+XUR+3QohhL+rAlWjc6nEpsBv/yDPwsuE3kR+9osPVMLMUIDJc66uFkVJau2rT9biyqy/scGwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/3.0.1/Youtube.min.js" integrity="sha512-W11MwS4c4ZsiIeMchCx7OtlWx7yQccsPpw2dE94AEsZOa3pmSMbrcFjJ2J7qBSHjnYKe6yRuROHCUHsx8mGmhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+<nav class="bg-custom-gray-50 lg:h-[80px] h-[60px] fixed z-50 w-screen top-0">
+    <div class="flex items-center justify-start  h-full lg:pl-[60px] pl-4">
+        <a href="/home" class="flex items-center">
+            <img class="z-50 xl:h-16 lg:h-14 h-8 w-auto" src="/path-to-your-logo.png" alt="Logo">
+        </a>
+    </div>
+</nav>
+
+<div class="relative lg:top-20 top-[30px]">
+    <div class="h-full sm:w-full md:h-4/6 flex flex-col justify-center p-7 lg:p-14">
+        <p class="font-taviraj 2xl:text-[42px] lg:text-[36px] text-[28px] font-normal mb-6">
+            Live Event Title <!-- Replace with your event title -->
+        </p>
+        <p class="font-inter font-normal mb-6">
+            Description of the event goes here.
+        </p>
+        <p class="font-taviraj 2xl:text-[42px] lg:text-[36px] text-[28px] font-normal mb-6">
+            <!-- Video URL goes here -->
+            <video
+                class='video-js vjs-default-skin relative w-full'
+                id="player"
+                aspectRatio="16:9"
+                fluid="true"
+                playsinline controls preload="auto"
+                data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=VIDEO_ID" }] }'>
+            </video>
+            <!-- Or use an HLS stream if it's available -->
+            <!--
+            <video class='video-js vjs-default-skin relative w-full'
+                   id="player"
+                   aspectRatio="16:9"
+                   fluid="true"
+                   playsinline controls preload="auto"
+                   data-setup='{ "techOrder": ["html5"], "sources": [{ "type": "application/x-mpegURL", "src": "https://edge3.uk.kab.tv/live/en-medium/playlist.m3u8" }] }'>
+            </video>
+            -->
+            <!-- Or use an MP4 source -->
+            <!--
+            <video class='video-js vjs-default-skin relative w-full'
+                   id="player"
+                   aspectRatio="16:9"
+                   fluid="true"
+                   playsinline controls preload="auto"
+                   data-setup='{}'>
+                <source src="path-to-your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            -->
+        </p>
+    </div>
+
+    <!-- Include tree SVG if needed -->
+    <div class="tree-svg">
+        <!-- Add SVG or remove this section if unnecessary -->
+    </div>
+</div>
+
+</body>
+</html>
