@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Video</title>
+    <!-- Add Video.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.17.2/video-js.min.css" rel="stylesheet" />
+    <!-- Add Video.js JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.17.2/video.min.js"
         integrity="sha512-OvIj8+vO4dNS+XUR+3QohhL+rAlWjc6nEpsBv/yDPwsuE3kR+9osPVMLMUIDJc66uFkVJau2rT9biyqy/scGwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Add Video.js YouTube plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/3.0.1/Youtube.min.js"
         integrity="sha512-W11MwS4c4ZsiIeMchCx7OtlWx7yQccsPpw2dE94AEsZOa3pmSMbrcFjJ2J7qBSHjnYKe6yRuROHCUHsx8mGmhA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-
-
-                <video class='video-js vjs-default-skin relative w-full' id="player" aspectRatio="16:9" fluid="true"
-                    playsinline controls preload="auto"
-                    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=oWW5TLrrbNo" }] }'>
-                </video>
-
-
+    <video class='video-js vjs-default-skin' id="player" playsinline controls preload="auto"
+        data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=oWW5TLrrbNo" }], "aspectRatio": "16:9", "fluid": true }'>
+    </video>
 </body>
 
 </html>
